@@ -83,25 +83,13 @@ class Udacidata
 		end
 	end
 
-	def find(loc)
+	def self.find(loc)
 		headers = CSV.read(@@data_path)[0]
-		products = CSV.read(@@data_path).drop(1)
-		index = nil
-		count = 0
+		product = CSV.read(@@data_path)[loc]
 
-		products.each do |row|
-			if row[0] == loc 
-				index = count
-			end
-			count += 1
-		end
-
-		data_object_hash = {}
-		headers.each_with_index do |value, index|
-			data_object_hash[value.to_sym] = row[index]
-		end
+		data_object_hash = self.create_hash(headers, product)
 		data_object = self.new(data_object_hash)
-
+		return data_object
 	end
   
 end
