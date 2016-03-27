@@ -4,7 +4,6 @@ require 'csv'
 
 class Udacidata
 
-	Udacidata.create_finder_methods("brand", "name", "price", "id")
 	@@data_path	= File.dirname(__FILE__) + "/../data/data.csv"
 	
 
@@ -82,6 +81,7 @@ class Udacidata
 		end
 	end
 
+	#Find the object at specified location and returns it
 	def self.find(loc)
 		headers = CSV.read(@@data_path)[0]
 		product = CSV.read(@@data_path)[loc]
@@ -90,6 +90,7 @@ class Udacidata
 		return data_object
 	end
 
+	#Destroy the object at specified location
 	def self.destroy(loc)
 		database = CSV.read(@@data_path)
 		headers = database[0]
@@ -104,6 +105,26 @@ class Udacidata
 
 		data_object = self.clone(headers, product)
 		return data_object
+	end
+
+	#Return array containing all products with attribute
+	def self.where(attributes={})
+		where_arr = []
+		database = CSV.read(@@data_path)
+		headers = database[0]
+		products = database.drop(1)
+
+		attributes.each do |key, value|
+			index = headers.find_index(key.to_s)
+			products.each do |product|
+				if product[index] = value
+					data_object = self.clone(headers, product)
+					where_arr << data_object
+				end
+			end
+		end
+
+		return where_arr
 	end
 
 end

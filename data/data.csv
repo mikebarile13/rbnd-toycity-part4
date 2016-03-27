@@ -1,100 +1,101 @@
 id,brand,name,price
-1,"Gulgowski, Kulas and Brakus",Mediocre Silk Car,86.14
-3,Rutherford Inc,Fantastic Silk Gloves,77.67
-4,"Bartoletti, Mills and Ruecker",Practical Bronze Wallet,85.17
-5,Boyer and Sons,Synergistic Linen Coat,84.44
-6,Sipes-Carroll,Fantastic Paper Pants,56.4
-7,Bins-Wuckert,Durable Plastic Lamp,46.56
-8,Considine-Wuckert,Intelligent Concrete Plate,24.4
-9,Stamm and Sons,Small Linen Chair,30.85
-10,Streich-Weimann,Practical Linen Shoes,81.45
-11,VonRueden-Lesch,Rustic Plastic Pants,11.06
-12,Koch and Sons,Synergistic Copper Plate,25.05
-13,Cummerata Inc,Incredible Granite Watch,14.46
-14,"Beier, Hauck and Dickinson",Incredible Cotton Computer,67.17
-15,Stanton Group,Heavy Duty Silk Coat,36.35
-16,Heller Group,Sleek Aluminum Hat,89.72
-17,Mante-Bosco,Enormous Concrete Gloves,76.52
-18,"Beer, Shanahan and Harvey",Sleek Cotton Shirt,31.45
-19,Boyle-Lynch,Mediocre Paper Coat,18.42
-20,"Okuneva, Oberbrunner and Lemke",Mediocre Rubber Wallet,60.96
-21,Denesik Group,Incredible Marble Bag,81.01
-22,Konopelski-Miller,Awesome Iron Keyboard,67.11
-23,Koch-Wisozk,Gorgeous Copper Computer,60.99
-24,"Gerhold, Doyle and Sauer",Synergistic Steel Knife,79.29
-25,Hackett Inc,Awesome Aluminum Plate,8.31
-26,Upton LLC,Incredible Silk Wallet,91.5
-27,"Barrows, Dickens and Tromp",Mediocre Cotton Chair,20.13
-28,"Dicki, Padberg and Mertz",Small Rubber Chair,14.69
-29,"Ryan, Witting and Botsford",Aerodynamic Concrete Bench,46.72
-30,Fahey-Gottlieb,Incredible Steel Coat,13.13
-31,Jacobi-Corwin,Lightweight Marble Gloves,54.04
-32,"Gusikowski, Zulauf and Dickinson",Heavy Duty Copper Shirt,42.13
-33,Lueilwitz-Hartmann,Durable Bronze Pants,40.59
-34,"Dare, Walsh and Turner",Incredible Paper Coat,47.11
-35,O'Keefe-Pollich,Enormous Linen Shirt,40.05
-36,"Bosco, Prosacco and Wintheiser",Synergistic Wool Knife,32.87
-37,Strosin and Sons,Durable Iron Gloves,82.93
-38,Lowe-Feil,Small Leather Plate,74.36
-39,Schoen Group,Fantastic Rubber Bench,24.78
-40,Lehner-Marvin,Rustic Rubber Knife,26.11
-41,Koelpin-Schowalter,Awesome Iron Coat,88.86
-42,Hegmann LLC,Synergistic Silk Lamp,24.33
-43,Farrell and Sons,Ergonomic Copper Bag,24.52
-44,Bashirian-Wolf,Awesome Rubber Keyboard,24.54
-45,Rosenbaum LLC,Fantastic Copper Shirt,58.35
-46,Schaefer and Sons,Rustic Iron Pants,53.36
-47,Kuhlman-Beahan,Synergistic Granite Car,39.75
-48,Mante LLC,Practical Linen Lamp,45.74
-49,"Kiehn, Predovic and Erdman",Incredible Bronze Car,64.48
-50,Gislason-Cole,Intelligent Bronze Table,61.87
-51,Spencer-Fisher,Ergonomic Silk Wallet,11.28
-52,Thiel-Bode,Incredible Wooden Knife,90.1
-53,Medhurst Inc,Heavy Duty Plastic Car,52.58
-54,Metz Group,Enormous Wool Coat,3.79
-55,"Satterfield, Rolfson and Farrell",Gorgeous Rubber Pants,59.27
-56,"Crona, Rodriguez and Hodkiewicz",Intelligent Rubber Hat,13.34
-57,Lakin Inc,Small Bronze Lamp,84.9
-58,"Zboncak, Vandervort and Hamill",Sleek Aluminum Keyboard,32.73
-59,Abbott and Sons,Durable Steel Computer,82.98
-60,"Waelchi, O'Keefe and Wunsch",Intelligent Iron Computer,87.11
-61,Watsica Inc,Aerodynamic Wooden Pants,69.44
-62,Conn-Strosin,Ergonomic Plastic Wallet,96.63
-63,Schmeler-Luettgen,Practical Leather Bottle,34.6
-64,"Reynolds, Torphy and Sauer",Sleek Copper Plate,40.3
-65,"Lowe, Mraz and Orn",Incredible Silk Bag,72.08
-66,Jacobi Group,Sleek Paper Computer,20.86
-67,Parisian-Stamm,Sleek Linen Car,45.66
-68,"Auer, Kemmer and Spinka",Sleek Concrete Lamp,59.33
-69,Von-Mraz,Intelligent Granite Keyboard,4.64
-70,Ziemann-Renner,Gorgeous Marble Coat,20.29
-71,Marvin-Homenick,Synergistic Wooden Table,21.99
-72,"Kovacek, Treutel and Hoppe",Synergistic Granite Plate,0.79
-73,Keebler-Schmitt,Ergonomic Bronze Shoes,8.54
-74,Moen-Ward,Ergonomic Cotton Gloves,46.23
-75,Cremin-Friesen,Mediocre Plastic Gloves,45.08
-76,"Nicolas, Frami and Halvorson",Ergonomic Plastic Chair,7.47
-77,Oberbrunner-Hermiston,Durable Paper Coat,4.35
-78,Schultz LLC,Aerodynamic Bronze Wallet,68.02
-79,Kiehn LLC,Small Iron Bag,62.3
-80,Gleichner-Turner,Durable Steel Shoes,90.52
-81,Bergstrom-Heidenreich,Aerodynamic Cotton Shoes,32.45
-82,"Koss, Franecki and Roob",Awesome Bronze Knife,5.55
-83,Russel and Sons,Aerodynamic Wooden Bag,96.74
-84,Hintz-Christiansen,Sleek Cotton Table,41.56
-85,"Lubowitz, Swift and Eichmann",Fantastic Bronze Pants,59.85
-86,McClure-Turcotte,Sleek Paper Table,77.73
-87,Streich Inc,Practical Wooden Hat,81.78
-88,Lakin-Miller,Heavy Duty Concrete Car,85.41
-89,Ernser Inc,Practical Rubber Gloves,44.59
-90,Runolfsson-Bergstrom,Heavy Duty Rubber Table,36.53
-91,Gutmann Inc,Ergonomic Cotton Plate,32.64
-92,Bruen-Johns,Lightweight Paper Pants,83.42
-93,Haag-Predovic,Enormous Steel Table,31.45
-94,"Botsford, Heidenreich and Pouros",Rustic Leather Wallet,77.92
-95,Monahan and Sons,Aerodynamic Granite Car,2.46
-96,Johnston Inc,Incredible Wool Chair,71.94
-97,Pollich-O'Keefe,Practical Marble Car,88.12
-98,"Ankunding, Schmitt and Ondricka",Mediocre Concrete Shoes,77.71
-99,Herzog-Mueller,Practical Steel Shirt,40.35
-100,Sawayn LLC,Awesome Iron Bottle,94.15
+1,Quitzon and Sons,Sleek Granite Hat,42.32
+2,"Swift, Marks and Fadel",Small Aluminum Coat,12.66
+3,Mills and Sons,Awesome Silk Table,78.33
+4,"Reynolds, Lang and Johnson",Lightweight Copper Car,4.65
+5,Oberbrunner Inc,Durable Leather Gloves,28.58
+6,"Powlowski, Grimes and Will",Enormous Steel Hat,62.53
+7,"Wehner, McLaughlin and Boehm",Gorgeous Iron Bag,30.32
+8,Bernhard-Harris,Mediocre Marble Computer,63.49
+9,Greenholt Inc,Gorgeous Bronze Shirt,50.41
+10,"Kutch, Abbott and Waelchi",Small Rubber Gloves,18.59
+11,Parisian Group,Aerodynamic Wool Shirt,49.4
+12,Hoppe Inc,Heavy Duty Granite Gloves,88.58
+13,Haag-Zboncak,Lightweight Steel Plate,45.7
+14,"Daniel, Rogahn and Goldner",Enormous Cotton Wallet,32.64
+15,Koelpin-Gerhold,Small Paper Pants,75.59
+16,Heidenreich-Zemlak,Fantastic Copper Wallet,56.22
+17,"Wiza, Gottlieb and Macejkovic",Practical Aluminum Shoes,49.27
+18,Nikolaus Inc,Durable Aluminum Shoes,63.64
+19,Rice-Hilll,Durable Iron Watch,62.76
+20,"Lindgren, Herman and Hauck",Synergistic Plastic Wallet,67.25
+21,Donnelly-Gusikowski,Gorgeous Marble Gloves,43.88
+22,"Sporer, Lehner and Mante",Aerodynamic Rubber Knife,24.98
+23,White-Morissette,Aerodynamic Copper Wallet,32.52
+24,Ullrich Group,Fantastic Paper Watch,36.22
+25,Kozey-Bashirian,Sleek Wool Clock,36.59
+26,Gerlach Group,Lightweight Linen Bag,36.13
+27,Hartmann-Blanda,Ergonomic Aluminum Computer,37.31
+28,"Johnston, Bartoletti and Bashirian",Heavy Duty Plastic Table,92.57
+29,Kiehn-Murazik,Heavy Duty Paper Chair,90.46
+30,Kessler LLC,Heavy Duty Copper Chair,77.75
+31,Little Inc,Aerodynamic Rubber Coat,20.69
+32,Rosenbaum and Sons,Mediocre Copper Computer,80.16
+33,"Herzog, Friesen and Welch",Ergonomic Wool Bench,35.7
+34,"Luettgen, Gottlieb and Langworth",Small Leather Shoes,69.61
+35,Bernier-Kihn,Intelligent Leather Pants,5.04
+36,Hickle-Waters,Gorgeous Wool Knife,97.68
+37,Parker Group,Practical Silk Keyboard,80.28
+38,Jenkins-Langworth,Fantastic Steel Shoes,14.52
+39,Dietrich LLC,Heavy Duty Cotton Bottle,31.92
+40,Bauch LLC,Mediocre Iron Chair,3.04
+41,Doyle-White,Sleek Aluminum Plate,0.26
+42,Nikolaus and Sons,Small Steel Pants,11.55
+43,Koss and Sons,Gorgeous Bronze Coat,46.99
+44,Schmitt-Koch,Intelligent Linen Gloves,48.71
+45,Kirlin-Howe,Sleek Bronze Hat,95.4
+46,Mayer Group,Small Bronze Watch,99.76
+47,Simonis Inc,Awesome Plastic Shirt,18.49
+48,Schamberger-Feil,Awesome Iron Computer,42.33
+49,Goldner-Gulgowski,Mediocre Leather Car,48.16
+50,"Monahan, Wilkinson and Grimes",Ergonomic Plastic Coat,52.12
+51,"Pacocha, Lehner and Block",Enormous Rubber Hat,56.42
+52,Heaney-Bartell,Fantastic Marble Plate,98.17
+53,Hartmann LLC,Synergistic Linen Clock,79.89
+54,"Ankunding, Schroeder and Gerhold",Mediocre Aluminum Watch,69.64
+55,McLaughlin and Sons,Enormous Concrete Knife,75.42
+56,Quigley-Jenkins,Mediocre Steel Bench,85.38
+57,"Schmeler, Mayer and Denesik",Mediocre Silk Shoes,32.7
+58,Senger-Witting,Aerodynamic Iron Shoes,83.72
+59,Fadel Inc,Mediocre Linen Plate,72.29
+60,Ruecker-Cartwright,Small Silk Computer,72.75
+61,Kautzer-Daniel,Synergistic Aluminum Keyboard,13.47
+62,Ernser Inc,Durable Leather Pants,68.97
+63,Considine LLC,Mediocre Wool Computer,90.41
+64,McDermott-Koepp,Aerodynamic Plastic Bench,88.71
+65,Carroll LLC,Ergonomic Iron Plate,75.41
+66,Stracke and Sons,Durable Wooden Bottle,87.03
+67,Lebsack Group,Synergistic Steel Keyboard,79.17
+68,Raynor-Legros,Aerodynamic Wooden Coat,94.55
+69,Wintheiser-VonRueden,Aerodynamic Cotton Chair,78.57
+70,Schmitt-Roberts,Lightweight Marble Bottle,14.21
+71,"Leuschke, Kshlerin and Ritchie",Durable Marble Table,30.63
+72,Gulgowski-Kunde,Awesome Iron Gloves,88.71
+73,Bradtke-Bergstrom,Mediocre Silk Bag,28.12
+74,Rohan-Leannon,Enormous Concrete Car,21.84
+75,Wolff-Rowe,Fantastic Concrete Hat,74.46
+76,"Stehr, Hilll and Wiza",Awesome Steel Keyboard,12.24
+77,"Schulist, Greenfelder and Marquardt",Synergistic Aluminum Shirt,88.75
+78,Bartoletti-Reichel,Practical Paper Gloves,57.78
+79,Hirthe and Sons,Gorgeous Bronze Knife,10.19
+80,Nicolas-Veum,Practical Plastic Watch,12.9
+81,Dickens-Bergstrom,Enormous Aluminum Chair,61.1
+82,Grady LLC,Durable Iron Bag,34.97
+83,Hoppe and Sons,Synergistic Aluminum Knife,97.66
+84,"Bernier, Morar and Johnston",Durable Concrete Keyboard,75.39
+85,"Upton, Bailey and Schinner",Sleek Granite Pants,63.53
+86,Schmeler-Schneider,Enormous Wooden Shirt,20.11
+87,Johnson LLC,Enormous Leather Shirt,3.41
+88,Schuppe and Sons,Synergistic Linen Keyboard,83.97
+89,Mertz-Pouros,Mediocre Plastic Plate,29.08
+90,"Marvin, Goyette and Spinka",Aerodynamic Linen Wallet,93.96
+91,Larson-Bins,Practical Iron Coat,14.84
+92,Deckow LLC,Gorgeous Steel Table,83.39
+93,"Pfeffer, Daniel and Goyette",Awesome Rubber Bench,35.42
+94,Kessler and Sons,Small Wooden Shirt,19.14
+95,"Bogisich, Aufderhar and Breitenberg",Intelligent Leather Shirt,30.48
+96,Mayert-Legros,Mediocre Wool Coat,1.84
+97,Donnelly-Gutkowski,Awesome Steel Knife,79.86
+98,Wiza Group,Durable Marble Bottle,75.43
+99,Wolff-Tillman,Intelligent Rubber Knife,24.82
+100,"Kris, Lang and Little",Intelligent Bronze Wallet,90.02
