@@ -4,7 +4,6 @@ require 'csv'
 
 class Udacidata
 
-	@@all_products = []
 	@@data_path	= File.dirname(__FILE__) + "/../data/data.csv"
 	
 
@@ -27,29 +26,41 @@ class Udacidata
 
 	#Return array of all products 
 	def self.all
-		@@all_products = []
+		all_products = []
 		products = CSV.read(@@data_path)
 		headers = products.shift
 
 		products.each do |row|
 			data_object_hash = {}
 			headers.each_with_index do |value, index|
-				data_object_hash[value] = row[index]
+				data_object_hash[value.to_sym] = row[index]
 			end
 			data_object = self.new(data_object_hash)
-			@@all_products << data_object
+			all_products << data_object
 		end
 		
-		return @@all_products
+		return all_products
 	end
 
-	#Returns first product in all_products array
-	def self.first
-		return @@all_products[0]
+	#Returns first n products in database
+	def self.first(num_prods = 1)
+		headers = CSV.read(@@data_path)[0]
+		products = CSV.read(@@data_path).drop(1).first(num_prods)
+		n_products = []
+
+		products.each do |row|
+			data_object_hash = {}
+			headers.each_with_index do |value, index|
+				data_object_hash[value.to_sym] = row[index]
+			end
+			data_object = self.new(data_object_hash)
+			n_products << data_object
+		end
+		
+		if n_products.length == 1
+			return n_products[0]
+		else return n_products
+		end
 	end
-
-
-
-
   
 end
