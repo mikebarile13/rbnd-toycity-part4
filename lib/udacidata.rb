@@ -24,12 +24,13 @@ class Udacidata
 		return data_object
 	end
 
-	def self.create_hash(key_arr, prod_arr)
+	def self.clone(key_arr, prod_arr)
 		data_object_hash = {}
 		key_arr.each_with_index do |value, index|
 			data_object_hash[value.to_sym] = prod_arr[index]
 		end
-		return data_object_hash
+		data_object = self.new(data_object_hash)
+		return data_object
 	end
 
 	#Return array of all products 
@@ -39,8 +40,7 @@ class Udacidata
 		headers = products.shift
 
 		products.each do |row|
-			data_object_hash = self.create_hash(headers, row)
-			data_object = self.new(data_object_hash)
+			data_object = self.clone(headers, row)
 			all_products << data_object
 		end
 		
@@ -54,8 +54,7 @@ class Udacidata
 		n_products = []
 
 		products.each do |row|
-			data_object_hash = self.create_hash(headers, row)
-			data_object = self.new(data_object_hash)
+			data_object = self.clone(headers, row)
 			n_products << data_object
 		end
 		
@@ -72,8 +71,7 @@ class Udacidata
 		n_products = []
 
 		products.each do |row|
-			data_object_hash = self.create_hash(headers, row)
-			data_object = self.new(data_object_hash)
+			data_object = self.clone(headers, row)
 			n_products << data_object
 		end
 		
@@ -87,8 +85,23 @@ class Udacidata
 		headers = CSV.read(@@data_path)[0]
 		product = CSV.read(@@data_path)[loc]
 
-		data_object_hash = self.create_hash(headers, product)
-		data_object = self.new(data_object_hash)
+		data_object = self.clone(headers, product)
+		return data_object
+	end
+
+	def self.destroy(loc)
+		database = CSV.read(@@data_path)
+		headers = database[0]
+		product = database[loc]
+		database.delete_at(loc)
+
+		CSV.open(@@data_path, 'wb') do |csv|
+  			database.each do |row|
+  				csv << row
+  			end
+  		end
+
+		data_object = self.clone(headers, product)
 		return data_object
 	end
   
