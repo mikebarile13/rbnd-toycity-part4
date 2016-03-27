@@ -4,6 +4,7 @@ require 'csv'
 
 class Udacidata
 
+	Udacidata.create_finder_methods("brand", "name", "price", "id")
 	@@data_path	= File.dirname(__FILE__) + "/../data/data.csv"
 	
 
@@ -104,5 +105,5 @@ class Udacidata
 		data_object = self.clone(headers, product)
 		return data_object
 	end
-  
+
 end

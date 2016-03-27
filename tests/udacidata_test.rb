@@ -7,7 +7,7 @@ class TestUdacidata < MiniTest::Test
   def setup
     @data_path = File.dirname(__FILE__) + "/../data/data.csv"
     CSV.open(@data_path, "wb") do |csv|
-      csv << ["id", "brand", "product", "price"]
+      csv << ["id", "brand", "name", "price"]
     end
     db_seed
   end
@@ -120,12 +120,12 @@ class TestUdacidata < MiniTest::Test
      assert_equal(7, product.id)
    end
   
-  # def test_find_by_brand_method_returns_first_product_with_given_brand
-  #   Product.create(brand: "OritToys", name: "Sticky Notes", price: 34.00)
-  #   product = Product.find_by_brand("OritToys")
-  #   assert_equal("OritToys", product.brand)
-  # end
-  #
+  def test_find_by_brand_method_returns_first_product_with_given_brand
+     Product.create(brand: "OritToys", name: "Sticky Notes", price: 34.00)
+     product = Product.find_by_brand("OritToys")
+     assert_equal("OritToys", product.brand)
+  end
+  
   # def test_find_by_name_method_returns_first_product_with_given_name
   #   Product.create(brand: "OritToys", name: "Nyan Cat", price: 3.00)
   #   product = Product.find_by_name("Nyan Cat")
