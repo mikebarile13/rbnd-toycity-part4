@@ -11,25 +11,12 @@ class Udacidata
 	def self.create(attributes = nil)
 		data_object = self.new(attributes)
 
-		data_entry = []
-			data_entry << data_object.id
-			data_entry << data_object.brand
-			data_entry << data_object.name
-			data_entry << data_object.price
+		data_entry = self.create_update_entry(data_object)
 
   		CSV.open(@@data_path, 'a') do |csv|
   			csv << data_entry
   		end
 
-		return data_object
-	end
-
-	def self.clone(key_arr, prod_arr)
-		data_object_hash = {}
-		key_arr.each_with_index do |value, index|
-			data_object_hash[value.to_sym] = prod_arr[index]
-		end
-		data_object = self.new(data_object_hash)
 		return data_object
 	end
 
@@ -125,6 +112,46 @@ class Udacidata
 		end
 
 		return where_arr
+	end
+
+	def update(opts={})
+		database = CSV.read(@@data_path)
+		if opts[:brand] != nil; @brand = opts[:brand]; end
+		if opts[:name] != nil; @name = opts[:name]; end
+		if opts[:price] != nil; @price = opts[:price]; end
+
+		data_entry = []
+		data_entry << @id
+		data_entry << @brand
+		data_entry << @name
+		data_entry << @price
+
+		database[@id] = data_entry
+		CSV.open(@@data_path, 'wb') do |csv|
+  			database.each do |row|
+  				csv << row
+  			end
+  		end
+
+		return self
+	end
+
+	def self.create_update_entry(data_object)
+		data_entry = []
+		data_entry << data_object.id
+		data_entry << data_object.brand
+		data_entry << data_object.name
+		data_entry << data_object.price
+		return data_entry
+	end
+
+	def self.clone(key_arr, prod_arr)
+		data_object_hash = {}
+		key_arr.each_with_index do |value, index|
+			data_object_hash[value.to_sym] = prod_arr[index]
+		end
+		data_object = self.new(data_object_hash)
+		return data_object
 	end
 
 end
