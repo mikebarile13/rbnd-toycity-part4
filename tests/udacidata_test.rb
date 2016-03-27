@@ -18,11 +18,15 @@ class TestUdacidata < MiniTest::Test
       Product.create(brand: "WalterToys", name: "Sticky Notes", price: 34.00)
     end
     after = CSV.read(@data_path).length
+    puts before
+    puts after
     assert(after == before + 5)
   end
 
   def test_create_method_returns_product_object
+    puts CSV.read(@data_path).length
     product = Product.create(brand: "ColtToys", name: "Orchid Plant", price: 2.00)
+    puts CSV.read(@data_path).length
     assert_instance_of(Product, product)
   end
   
@@ -44,10 +48,10 @@ class TestUdacidata < MiniTest::Test
     assert_equal(expected, actual)
   end
   
-  def test_first_method_returns_product_object
-     product = Product.first
-     assert_instance_of(Product, product)
-  end
+  #def test_first_method_returns_product_object
+  #   product = Product.first
+  #   assert_instance_of(Product, product)
+  #end
   
   # def test_first_method_returns_correct_product
   #   product = Product.first
@@ -160,8 +164,8 @@ class TestUdacidata < MiniTest::Test
 
   # The "teardown" method always runs after the tests are done
   # "teardown" will delete the test database when tests are done
-  def teardown
-    File.delete(@data_path)
-  end
+  #def teardown
+  #  File.delete(@data_path)
+  #end
 
 end
