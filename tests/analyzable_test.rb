@@ -10,7 +10,7 @@ class TestAnalyzable < MiniTest::Test
   def setup
     @data_path = File.dirname(__FILE__) + "/../data/data.csv"
     CSV.open(@data_path, "wb") do |csv|
-      csv << ["id", "brand", "product", "price"]
+      csv << ["id", "brand", "name", "price"]
     end
     db_seed
   end

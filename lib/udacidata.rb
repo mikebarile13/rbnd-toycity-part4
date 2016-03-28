@@ -101,13 +101,23 @@ class Udacidata
 		headers = database[0]
 		products = database.drop(1)
 
-		attributes.each do |key, value|
-			index = headers.find_index(key.to_s)
-			products.each do |product|
-				if product[index] = value
-					data_object = self.clone(headers, product)
-					where_arr << data_object
+		products = products.map! do |product|
+			data_object_hash = {}
+			headers.each_with_index do |value, index|
+				data_object_hash[value.to_sym] = product[index]
+			end
+			data_object_hash
+		end
+
+		products.each do |product|
+			add = true
+			attributes.each do |key, value|
+				if product[key] != value
+					add = false
 				end
+			end
+			if add == true
+				where_arr << self.new(product)
 			end
 		end
 
