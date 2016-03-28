@@ -1,4 +1,5 @@
 module Analyzable
+
   def average_price(arr)
   	count = 0
   	total = 0.0
@@ -7,6 +8,18 @@ module Analyzable
   		count += 1
   	end
   	return (total/count).round(2)
+  end
+
+  def print_report(arr)
+  	%Q{
+  		Average price: $#{average_price(arr).round(2)}
+  		#{puts}
+  		Inventory by brand:
+  		  #{count_by_brand(arr).each{|key, value| puts " - " + key.to_s + ": " + value.to_s}}
+  		#{puts}
+  		Inventory by name:
+  		  #{count_by_name(arr).each{|key, value| puts " - " + key.to_s + ": " + value.to_s}}
+	}
   end
 
   def count_by_brand(arr)
@@ -39,10 +52,6 @@ module Analyzable
   	end
 
   	return names
-  end
-
-  def print_report(arr)
-
   end
 
 end

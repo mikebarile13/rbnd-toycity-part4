@@ -70,8 +70,16 @@ class Udacidata
 
 	#Find the object at specified location and returns it
 	def self.find(loc)
+		if loc > CSV.read(@@data_path).length - 1
+			raise UdaciDataErrors::ProductNotFoundError, "Location index #{loc} invalid"
+		elsif loc < 1
+			raise UdaciDataErrors::ProductNotFoundError, "Location index #{loc} invalid"
+		end
+
 		headers = CSV.read(@@data_path)[0]
 		product = CSV.read(@@data_path)[loc]
+
+
 
 		data_object = self.clone(headers, product)
 		return data_object
@@ -79,6 +87,12 @@ class Udacidata
 
 	#Destroy the object at specified location
 	def self.destroy(loc)
+		if loc > CSV.read(@@data_path).length - 1
+			raise UdaciDataErrors::ProductNotFoundError, "Location index #{loc} invalid"
+		elsif loc < 1
+			raise UdaciDataErrors::ProductNotFoundError, "Location index #{loc} invalid"
+		end
+
 		database = CSV.read(@@data_path)
 		headers = database[0]
 		product = database[loc]
@@ -124,6 +138,7 @@ class Udacidata
 		return where_arr
 	end
 
+	#Update a product's instance variables and the database
 	def update(opts={})
 		database = CSV.read(@@data_path)
 		if opts[:brand] != nil; @brand = opts[:brand]; end
@@ -146,6 +161,7 @@ class Udacidata
 		return self
 	end
 
+	#Useful method for quickly creating new entry for database
 	def self.create_update_entry(data_object)
 		data_entry = []
 		data_entry << data_object.id
@@ -155,6 +171,7 @@ class Udacidata
 		return data_entry
 	end
 
+	#Creates clone of a product listed in database
 	def self.clone(key_arr, prod_arr)
 		data_object_hash = {}
 		key_arr.each_with_index do |value, index|
