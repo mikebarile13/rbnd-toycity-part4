@@ -11,14 +11,17 @@ module Analyzable
   end
 
   def print_report(arr)
-  	%Q{
+  	brand_names = count_by_brand(arr).map { |k, v| "#{k}: $#{v}" }.join(', ')
+  	name_names = count_by_name(arr).map { |k, v| "#{k}: $#{v}" }.join(', ')
+
+  	return %Q{
   		Average price: $#{average_price(arr).round(2)}
   		#{puts}
   		Inventory by brand:
-  		  #{count_by_brand(arr).each{|key, value| puts " - " + key.to_s + ": " + value.to_s}}
+  		  #{brand_names}
   		#{puts}
   		Inventory by name:
-  		  #{count_by_name(arr).each{|key, value| puts " - " + key.to_s + ": " + value.to_s}}
+  		  #{name_names}
 	}
   end
 
