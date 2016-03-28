@@ -3,7 +3,7 @@ class Module
 	    attributes.each do |attribute|
 	    	new_method = %Q{
 			   def find_by_#{attribute}(data)
-			   		data_path = "/Users/michaelbarile/Udacity/rbnd-toycity-part4/data/data.csv"
+			   		data_path = File.dirname(__FILE__) + "/data/data.csv"
 					products = CSV.read(data_path)
 					header = products[0]
 					products.shift
