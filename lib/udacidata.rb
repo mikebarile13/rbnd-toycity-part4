@@ -69,34 +69,42 @@ class Udacidata
 	end
 
 	#Find the object at specified location and returns it
-	def self.find(loc)
-		if loc > CSV.read(@@data_path).length - 1
-			raise UdaciDataErrors::ProductNotFoundError, "Location index #{loc} invalid"
-		elsif loc < 1
-			raise UdaciDataErrors::ProductNotFoundError, "Location index #{loc} invalid"
+	def self.find(id)
+		if id > self.all.length - 1
+			raise UdaciDataErrors::ProductNotFoundError, "ID #{id} invalid"
+		elsif id < 1
+			raise UdaciDataErrors::ProductNotFoundError, "ID #{id} invalid"
 		end
 
 		headers = CSV.read(@@data_path)[0]
-		product = CSV.read(@@data_path)[loc]
+		products = self.all
 
+		product = nil
 
+		products.each do |row|
+			if row.id == id
+				product = row
+			end
+		end
 
-		data_object = self.clone(headers, product)
-		return data_object
+		return product
 	end
 
-	#Destroy the object at specified location
-	def self.destroy(loc)
-		if loc > CSV.read(@@data_path).length - 1
-			raise UdaciDataErrors::ProductNotFoundError, "Location index #{loc} invalid"
-		elsif loc < 1
-			raise UdaciDataErrors::ProductNotFoundError, "Location index #{loc} invalid"
+	#Destroy the object at specified idation
+	def self.destroy(id)
+		if id > self.all.length - 1
+			raise UdaciDataErrors::ProductNotFoundError, "ID #{id} invalid"
+		elsif id < 1
+			raise UdaciDataErrors::ProductNotFoundError, "ID #{id} invalid"
 		end
 
 		database = CSV.read(@@data_path)
 		headers = database[0]
-		product = database[loc]
-		database.delete_at(loc)
+		product = self.find(id)
+
+
+
+		database.delete_at(id)
 
 		CSV.open(@@data_path, 'wb') do |csv|
   			database.each do |row|
@@ -104,8 +112,7 @@ class Udacidata
   			end
   		end
 
-		data_object = self.clone(headers, product)
-		return data_object
+		return product
 	end
 
 	#Return array containing all products with attribute
