@@ -80,7 +80,6 @@ class Udacidata
 		products = self.all
 
 		product = nil
-
 		products.each do |row|
 			if row.id == id
 				product = row
@@ -101,10 +100,10 @@ class Udacidata
 		database = CSV.read(@@data_path)
 		headers = database[0]
 		product = self.find(id)
-		
-		index = nil.to_i
+
+		index = 0
 		database.each_with_index do |row, ind|
-			if product == self.clone(headers, row)
+			if id == row[0].to_i
 				index = ind
 			end
 		end
@@ -153,21 +152,22 @@ class Udacidata
 	#Update a product's instance variables and the database
 	def update(opts={})
 		database = CSV.read(@@data_path)
-		old_entry = [@id, @brand, @name, @price]
+		products = database.drop(1)
 
 		if opts[:brand] != nil; @brand = opts[:brand]; end
 		if opts[:name] != nil; @name = opts[:name]; end
 		if opts[:price] != nil; @price = opts[:price]; end
-		data_entry = [@id, @brand, @name, @price]
+		new_entry = [@id, @brand, @name, @price]
 
-		index = nil.to_i
-		database.each_with_index do |row, ind|
-			if old_entry == row
+		index = 0
+		products.each_with_index do |row, ind|
+			if row[0].to_i == @id
 				index = ind
 			end
 		end
+		index += 1
 
-		database[index] = data_entry
+		database[index] = new_entry
 		CSV.open(@@data_path, 'wb') do |csv|
   			database.each do |row|
   				csv << row
