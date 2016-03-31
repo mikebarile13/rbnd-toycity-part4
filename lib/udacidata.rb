@@ -70,11 +70,7 @@ class Udacidata
 
 	#Find the object at specified location and returns it
 	def self.find(id)
-		if id > self.all.length - 1
-			raise UdaciDataErrors::ProductNotFoundError, "ID #{id} invalid"
-		elsif id < 1
-			raise UdaciDataErrors::ProductNotFoundError, "ID #{id} invalid"
-		end
+		self.check_id(id)
 
 		headers = CSV.read(@@data_path)[0]
 		products = self.all
@@ -91,11 +87,7 @@ class Udacidata
 
 	#Destroy the object at specified idation
 	def self.destroy(id)
-		if id > self.all.length - 1
-			raise UdaciDataErrors::ProductNotFoundError, "ID #{id} invalid"
-		elsif id < 1
-			raise UdaciDataErrors::ProductNotFoundError, "ID #{id} invalid"
-		end
+		self.check_id(id)
 
 		database = CSV.read(@@data_path)
 		headers = database[0]
@@ -175,6 +167,26 @@ class Udacidata
   		end
 
 		return self
+	end
+
+	def self.check_id(id)
+		if id > self.all.length - 1
+			raise UdaciDataErrors::ProductNotFoundError, "ID #{id} invalid"
+		elsif id < 1
+			raise UdaciDataErrors::ProductNotFoundError, "ID #{id} invalid"
+		end
+
+		exists = false
+		self.all.each do |product|
+			if product.id == id
+				exists = true
+			end
+		end
+		
+		if exists == false
+			raise UdaciDataErrors::ProductNotFoundError, "ID #{id} invalid"
+		end		
+		
 	end
 
 	#Useful method for quickly creating new entry for database
